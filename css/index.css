@@ -177,7 +177,7 @@ h1{
     height: auto;
 }
 .business p {
-    font-size: 1.75rem;
+    font-size: 2vw;
     text-align: center;
     color: #fff;
     font-weight: bold;
@@ -226,10 +226,7 @@ h1{
     bottom: 0;
     left: 0;
 }
-.round a {
-    position: relative;
-    display: block;
-}
+
 .round p {
     position: absolute;
     top: 35%;
@@ -320,40 +317,6 @@ h1{
 	background-color: #f3f3f3;
 }
 
-/*タブレット*/
-@media screen and (max-width: 1024px) {
-.sidebar_parent{
-	display: none;
-}
-.parent_greeting {
-  width: 100%;
-}
-.greeting {
-  width: 100%;
-  height: 100%;
-  margin-left: 0px;
-}
-
-.greeting_message {
-  width: 80%;
-  margin: 0 auto 30px auto;
-}
-}
-
-
-/*スマホ*/
-@media screen and (max-width: 599px) {
-.sidebar_parent{
-	display: none;
-}
-.greating_table tr th {
-    font-size: 12px;
-}
-.pc_hid{
-    display: block;
-}
-}
-
 /* ニュース */
 .news {
     width: 100%;
@@ -369,18 +332,40 @@ h1{
     margin: 0 auto;
 }
 .list {
-    font-size: 1.75rem;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.list dt {
+    font-size: 1vw;
+    display: flex;
+    width: 40%;
+    height: 2vw;
+}
+.list dd {
+    font-size: 1vw;
+    width: 50%;
+    color: #666;
 }
 .list p {
     font-size: 1.15rem;
     color: #666;
 }
-.news_list {
-    display: flex;
+.genre {
+    background-color: #8a8f93;
+    color: #fff !important;
+    font-size: 0.5vw !important;
+    padding: 4px 45px;
+    height: 50%;
+    margin: 0px 0px 0px 3%;
+}
+.release_content {
+    text-align: left !important;
+    margin-top: 0px;
 }
 .new_date {
     width: 30%;
+    display: flex;
 }
 .news_content {
     width: 70%;
@@ -398,9 +383,10 @@ h1{
 .list_all a {
     border: solid 1px #bbc2c9;
     width: 100%;
-    padding: 15px 30px;
+    padding: 7% 14%;
     color: #666;
     text-decoration: none;
+    font-size: 1vw;
 }
 
 /* 社長あいさつ */
@@ -409,7 +395,7 @@ h1{
     padding-bottom: 30px;
 }
 .greating p {
-    font-size: 1.75rem;
+    font-size: 1.1vw;
     text-align: center;
 }
 .message {
@@ -499,217 +485,47 @@ h1{
   }
   
   
-  
-  /*タブレット*/
-  @media screen and (max-width: 1000px) {
-  
-  /*ヘッダー*/
-  .logo {
-    width: 30%;
-  }
-  .header_content img {
-    width: 25%;
-  }
+/*タブレット*/
+@media screen and (max-width: 1047px) {
+    .business {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .business_pic {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .round {
+        width: 48.6%;
+        padding-top: 42.333%;
+    }
+    .round p {
+        font-size: 4vw;
+    }
 
-  .header_content ul {
-    width: 70%;
-    font-size: 10px;
-  }
+    .pc_hid{
+        display: block;
+    }
+    .greating_table {
+        width: 100%;
+    }
 
-  .header_content ul li {
-    line-height: normal;
-  }
+    /* ニュース */
+    .news_space {
+        width: 80%;
+    }
+    .list {
+        display: block;
+    }
+    .list dt {
+        width: 100%;
+    }
+    .list dd {
+        width: 100%;
+    }
+}
 
-  .oroti {
-    width: 60px;
-    height: auto;
-  }
-  .header-title {
-    /*margin: 20px 0 85px 0px;*/
-    margin-top: 20px;
-    margin-bottom: 50px;
-    /*padding-left: 40px;*/
-  
-  }
-  .header-nav {
-    display: none;
-  }
-  
-  #header-hm-icon {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 10;
-  }
-  
-  .header-menu-trigger,
-  .header-menu-trigger span {
-    display: inline-block;
-    transition: all .4s;
-    box-sizing: border-box;
-  }
-  
-  .header-menu-trigger {
-    position: relative;
-    width: 30px;
-    height: 24px;
-  }
-  
-  .header-menu-trigger span {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #000;
-    border-radius: 4px;
-  }
-  
-  .header-menu-trigger span:nth-of-type(1) {
-    top: 0;
-  }
-  
-  .header-menu-trigger span:nth-of-type(2) {
-    top: 10px;
-  }
-  
-  .header-menu-trigger span:nth-of-type(3) {
-    bottom: 0;
-  }
-  
-  .header-menu-trigger.active span:nth-of-type(1) {
-    -webkit-transform: translateY(10px) rotate(-45deg);
-    transform: translateY(10px) rotate(-45deg);
-    background-color: #000;
-  }
-  
-  .header-menu-trigger.active span:nth-of-type(2) {
-    opacity: 0;
-  }
-  
-  .header-menu-trigger.active span:nth-of-type(3) {
-    -webkit-transform: translateY(-10px) rotate(45deg);
-    transform: translateY(-10px) rotate(45deg);
-    background-color: #000;
-  }
-  
-  /*フッター*/
-  .footer-index {
-    margin-top: 50px;
-    height: 180px;
-    border: 0px solid #fff;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .footer-box {
-    display: inline-block;
-    vertical-align: top;
-    /* width: 50%; */
-    height: 180px;
-    text-align: center;
-    padding-left: 50px;
-    /*border-left: 0px solid #fff;*/
-  }
-  .f-box1 {
-    width: 49%;
-  }
-  .f-box2 {
-    width: 50%;
-    border-right: 0px solid #ccc;
-    border-left: 1px solid #ccc; 
-  }
-  .copyright {
-    width: 100%;
-  }
-  .container p {
-    text-align: center;
-    color: #666;
-  }
-  
-  }
-  
-  
-  /*スマホ*/
-  @media screen and (max-width: 798px) {
-  /*ヘッダー*/
-  .oroti {
-    width: 60px;
-    height: auto;
-  }
-  .header-title {
-    margin-bottom: 20px auto;
-    padding-left: 0;
-    text-align: center;
-  
-  }
-  
-  .header-logo {
-    font-size: 20px;
-  }
+/*スマホ*/
+@media screen and (max-width: 599px) {
 
-  /* スライド */
-  .slick-dots {
-    margin: -50px 0 0 0;
-  }
-
-  .business_pic {
-    width: 90%;
-    flex-wrap: wrap;
-  }
-
-  .round {
-    width: 48%;
-    padding-left: 24%;
-  }
-
-  .round p {
-    line-height: 160px;
-    top: 32%;
-  }
-
-  .business p {
-    font-size: 2vw;
-  }
-
-  .greating_table {
-    width: 100%;
-  }
-
-  .news_space {
-    width: 100%;
-  }
-
-  .list p {
-    font-size: 15px;
-  }
-
-  .list_all {
-    padding-top: 9px;
-    height: 24px;
-    width: 25%;
-    font-size: 9px;
-  }
-
-  .list_all a {
-    width: 100%;
-    padding: 9px 24px;
-  }
-
-  .container {
-    text-align: initial;
-  }
-  /*フッター*/
-  .footer-index {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .footer-box {
-    padding-left: 0px;
-  }
-
-  .footer-title {
-    font-size: 13px;
-  }
-  
-  }
+}
